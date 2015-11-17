@@ -1,0 +1,18 @@
+<h1><%= @task.name %></h1>
+<p class="center_task">
+  <%= @task.description %>
+</p>
+<p class="center_task">
+  <% if !@task.completed.nil?  %>
+    Completed on <%= @task.completed.to_formatted_s(:long_ordinal) %>
+    <% else %>
+    Not completed
+    <% end %>
+</p>
+<p class = "center_task">
+  Assigned to: <%= @task.person.name %>
+</p>
+<p class="center_task">
+  <a href="/tasks/<%= @task.id %>/edit" >Edit task</a>
+</p>
+<%= render partial: 'backbutton' %>

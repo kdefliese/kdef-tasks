@@ -1,0 +1,22 @@
+<h1>People</h1>
+<div class="center">
+<% @people.each do |person| %>
+  <span>
+    <a href="/people/<%= person.id %>" >
+      <%= person.name %> - <%= person.tasks.where({:completed => nil}).length %>
+      <% unless person.tasks.where({:completed => nil}).length == 1 %>
+        uncompleted tasks
+        <% else %>
+        uncompleted task
+        <% end %>
+    </a>
+  </span>
+  <br />
+<% end %>
+</div>
+<p class="add_new">
+  <a href="/people/new">Add a new person</a>
+</p>
+<p class="add_new">
+  <a href="/tasks/">See all tasks</a>
+</p>

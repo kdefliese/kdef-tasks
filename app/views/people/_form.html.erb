@@ -1,0 +1,8 @@
+<%= form_for @person, :html => {:class => "form-inline"} do |f| %>
+  <fieldset>
+    <legend><%= legend_text %></legend>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit value: "#{button_text}", class: "new_button"%>
+  </fieldset>
+<% end %>

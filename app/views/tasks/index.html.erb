@@ -1,0 +1,22 @@
+
+<h1>Task List</h1>
+<div class="center">
+<% @tasks.each do |task| %>
+  <span>
+    <% if !task.completed.nil? %>
+      <%= button_to "  ", "/tasks/#{task.id}/complete",  method: :patch, class: 'completed-button' %>
+    <% else %>
+      <%= button_to "  ", "/tasks/#{task.id}/complete",  method: :patch, class: 'complete-button' %>
+    <% end %>
+    <a href="/tasks/<%= task.id %>"<% if !task.completed.nil? %>class="strikethrough"<% end %>><%= task.name %> - <%= task.person.name %></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= button_to "X", "/tasks/#{task.id}",  method: :delete, data: { confirm: "Are you sure you want to delete this task?" } , class: 'x-button' %>
+  </span>
+  <br />
+<% end %>
+</div>
+<p class="add_new">
+  <a href="/tasks/new">Add a new task</a>
+</p>
+<p class="add_new">
+  <a href="/people/">See tasks per person</a>
+</p>

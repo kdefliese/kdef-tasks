@@ -1,0 +1,28 @@
+<h1><%= @person.name %></h1>
+<div class="center">
+  <span>
+    To Do:
+    <br />
+    <% @tasks.each do |task| %>
+      <% if task.completed.nil? %>
+        <a href="/tasks/<%= task.id %>"><%= task.name %></a>
+        <br />
+      <% end %>
+    <% end %>
+  </span>
+  <br />
+  <br />
+  <br />
+  <span>
+    Completed:
+    <br />
+    <% @tasks.each do |task| %>
+      <% if !task.completed.nil? %>
+        <a href="/tasks/<%= task.id %>" class="strikethrough"><%= task.name %></a>
+        <br />
+        <% end %>
+      <% end %>
+    </span>
+    <br />
+</div>
+<%= render partial: 'backbutton' %>

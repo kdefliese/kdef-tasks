@@ -1,0 +1,10 @@
+<h1><%= @person.name %></h1>
+<div class="center">
+  <span>
+    <a href="/people/<%= @person.id %>/tasks">See task list </a>
+    <br />
+    <br />
+    <a href="/people/<%= @person.id %>/edit">Edit person </a>
+  </span>
+</div>
+<%= render partial: 'backbutton' %>

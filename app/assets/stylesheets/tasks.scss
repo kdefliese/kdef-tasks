@@ -1,0 +1,103 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0;
+  background-image: url(/Chalkboard-background.jpg);
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  color: #FBFBFB;
+  font-family: 'Rock Salt', cursive;
+  font-size: 2.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #FBFBFB;
+}
+
+a:hover {
+  color: #800000;
+}
+
+p {
+  color: #FBFBFB;
+  font-family: 'Rock Salt', cursive;
+  font-size: 1.5em;
+}
+
+span {
+  color: #FBFBFB;
+  font-family: 'Rock Salt', cursive;
+  line-height: 40px;
+  font-size: 1.5em;
+  word-wrap: break-word;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding-left: 200px;
+}
+
+.center_task {
+  text-align: center;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.x-button {
+  border: none;
+  display: inline;
+  background: transparent;
+  font-family: 'Rock Salt', cursive;
+  color: #FBFBFB;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form {
+  display: inline!important;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  font-family: 'Rock Salt', cursive;
+  color: #FBFBFB;
+}
+
+.add_new {
+  margin-top: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.new_button {
+  margin-left: 20px;
+  font-family: 'Rock Salt', cursive;
+  color: #FBFBFB;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.complete-button {
+  background: transparent;
+  border: 3px solid #FBFBFB;
+  margin-right: 15px;
+}
+
+.completed-button {
+  background: #FBFBFB;
+  border: 3px solid #FBFBFB;
+  margin-right: 15px;
+}
